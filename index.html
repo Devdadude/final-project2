@@ -1,104 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devin's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <script src="https://kit.fontawesome.com/8e96d2fb1f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div id="page">
+    <!--========================= Blue Navigation Box =========================-->
+    <div id="navigation">
+      <div id="navLinks">
+        <li>
+          <a href="#home">Home</a>
+          <a href="#aboutSect">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#footSect">Contact</a>
+        </li>
+      </div>
+    </div>
 
-    <!-- ===== Navigation Bar ===== -->
-    <nav id="navigation">
-      <ul id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- ===== Header / Landing Section ===== -->
+    <!--========================= Purple Intro Box =========================-->
     <header id="home">
-      <h1>Hi! I'm Devin</h1>
+      <h3>Hi! I'm Devin</h3><br>
       <h2>Welcome to my Portfolio</h2>
     </header>
 
-    <!-- ===== About Me Section ===== -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a Junior at Mt. Eden High School. <br><br>
-        This year was my first time getting into programming. With the help of my AP Computer Science teacher, I started learning C++ and JavaScript. Although I struggled at first, I realized I was actually pretty good at it. I enjoyed learning and it started to click — I appreciate everything I've learned this year.
-      </p>
-    </section>
+    <!--========================= Yellow Profile Box =========================-->
+    <main id="aboutSect">
+      <h1>About Me</h1>
+      <div id="writing">
+        <p>
+          I'm a Junior at Mt. Eden High School.
+          <br><br>
+          This year, was my first year getting into programming. With my AP Computer Science teacher, I was able to start working with C++ and JavaScript. Even though I struggled at first, I soon came to realize that I was actually pretty good at it and I understood it well. I really enjoyed learning in this class and I felt like at times it just clicked for me. I appreciate all I've learned this year.
+        </p>
+      </div>
+    </main>
 
-    <!-- ===== Projects Section ===== -->
-    <section id="projects">
-      <h2>My Projects</h2>
+    <!--========================= Blue Projects Box =========================-->
+    <projects id="projects">
+      <h3 id="projectSect">My Projects</h3>
 
-      <!-- Project 1: Cookie Clicker -->
-      <div class="project">
-        <h3>Cookie Clicker</h3>
-        <p>A simple cookie clicker game. Click the cookie to earn points, buy upgrades, or even unlock auto clickers!</p>
-        <div id="CookieClicker" class="projects">
-          <div class="cookie-container">
-            <div class="rank" id="rank">Rank: Novice</div>
-            <p>Cookies: <span id="score">0</span></p>
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/044/279/881/small/chocolate-chips-on-cookie-on-transparent-background-png.png" alt="cookie" class="cookie" id="cookie" />
-            <br />
-            <button class="button" id="buyUpgradeBtn">Buy Upgrade (Cost: <span id="upgradeCost">15</span>)</button>
-            <button class="button" id="buyAutoClickerBtn">Buy Auto Clicker (Cost: <span id="autoCost">30</span>)</button>
-          </div>
+      <!-- Cookie Clicker -->
+      <div class="desc">
+        <h2>Cookie Clicker</h2>
+        <h4>A simple cookie clicker game made from scratch. Click the cookie to earn points, and buy upgrades or an auto-clicker as you go!</h4>
+      </div>
+      <div id="CookieClicker" class="projects">
+        <div class="cookie-container">
+          <div class="rank" id="rank">Rank: Novice</div>
+          <p>Cookies: <span id="score">0</span></p>
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/044/279/881/small/chocolate-chips-on-cookie-on-transparent-background-png.png" alt="cookie" class="cookie" id="cookie" />
+          <br />
+          <button class="button" id="buyUpgradeBtn">Buy Upgrade (Cost: <span id="upgradeCost">15</span>)</button>
+          <button class="button" id="buyAutoClickerBtn">Buy Auto Clicker (Cost: <span id="autoCost">30</span>)</button>
         </div>
       </div>
 
-      <!-- Project 2: Hangman -->
-      <div class="project">
-        <h3>Hangman</h3>
-        <p>Pick a topic and try to guess the word before time runs out! A fun challenge for your brain.</p>
-        <div id="hangman-game" class="container">
-          <div id="options-container"></div>
-          <div id="letter-container" class="letter-container hide"></div>
-          <div id="user-input-section"></div>
-          <canvas id="canvas" width="150" height="250"></canvas>
-          <div id="new-game-container" class="new-game-popup hide">
-            <div id="result-text"></div>
-            <button id="new-game-button">New Game</button>
-          </div>
+      <!-- Hangman -->
+      <div class="desc">
+        <h2>Hangman</h2>
+        <h4>Pick one of four categories and guess the word before the stick figure is complete. Fun and educational!</h4>
+      </div>
+      <div id="hangman-game" class="container">
+        <div id="options-container"></div>
+        <div id="letter-container" class="letter-container hide"></div>
+        <div id="user-input-section"></div>
+        <canvas id="canvas" width="150" height="250"></canvas>
+        <div id="new-game-container" class="new-game-popup hide">
+          <div id="result-text"></div>
+          <button id="new-game-button">New Game</button>
         </div>
       </div>
 
-      <!-- Project 3: Pong Game -->
-      <div class="project">
-        <h3>Pong Game</h3>
-        <p>Play a classic pong game against an AI opponent. Use arrow keys to control your paddle!</p>
-        <div id="pong-game" class="container">
-          <div id="game-header">
-            <h4>Pong Game</h4>
-          </div>
-          <div id="game-container">
-            <canvas id="pong-canvas" width="600" height="400"></canvas>
-          </div>
-          <div id="game-instructions">
-            <p>Control the left player by using the UP and DOWN arrow keys</p>
-          </div>
+      <!-- Pong -->
+      <div class="desc">
+        <h2>Pong Game</h2>
+        <h4>Retro pong-style game where you play against AI. Use UP and DOWN arrow keys to move your paddle!</h4>
+      </div>
+      <div id="pong-game" class="container">
+        <div id="game-header">
+          <h4>Pong Game</h4>
+        </div>
+        <div id="game-container">
+          <canvas id="pong-canvas" width="600" height="400"></canvas>
+        </div>
+        <div id="game-instructions">
+          <p>Control the left player by using the UP and DOWN arrow keys</p>
         </div>
       </div>
-    </section>
+    </projects>
 
-    <!-- ===== Footer / Contact Section ===== -->
-    <footer id="contact">
-      <h2>Socials</h2>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/devdadude22/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
-        <a href="https://www.snapchat.com/add/devsantos22" aria-label="Snapchat"><i class="fa-brands fa-snapchat fa-xl"></i></a>
-      </div>
+    <!--========================= Purple Footer Box =========================-->
+    <script src="https://kit.fontawesome.com/8e96d2fb1f.js" crossorigin="anonymous"></script>
+
+    <footer id="footSect">
+      <h1>Socials</h1><br>
+      <a href="https://www.instagram.com/devdadude22/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-xl" style="color:var(--white)"></i></a>
+      <a href="https://www.snapchat.com/add/devsantos22" aria-label="Snapchat"><i class="fa-brands fa-snapchat fa-xl" style="color:var(--white)"></i></a>
     </footer>
-
   </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
